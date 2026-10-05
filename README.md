@@ -1,1 +1,1 @@
-İnşaat şirketi web sitesi
+İnşaat şirketi web sitesi.
