@@ -34,9 +34,30 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-document.querySelectorAll('.service-card, .portfolio-card, .testimonial-card, .process-step, .feature, .contact-item, .badge-item').forEach(el => {
+document.querySelectorAll('.service-card, .portfolio-card, .testimonial-card, .process-step, .feature, .contact-item, .badge-item, .faq-item').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
+});
+
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isActive = item.classList.contains('active');
+
+    document.querySelectorAll('.faq-item.active').forEach(openItem => {
+      openItem.classList.remove('active');
+      openItem.querySelector('.faq-answer').style.maxHeight = null;
+      openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+
+    if (!isActive) {
+      item.classList.add('active');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      button.setAttribute('aria-expanded', 'true');
+    }
+  });
 });
 
 // Contact form
