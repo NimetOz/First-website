@@ -80,3 +80,12 @@ First-website/
 - Contact form has both "Hizmet Seçiniz" (service) and "Bölge Seçiniz" (region) dropdowns specific to the 4 service areas
 - Form submission shows a Turkish alert message and resets
 - The Köyceğiz project is specifically 2 SEPARATE independent villas — not twin/duplex villas
+
+## Çalışma Kuralları
+
+- Her iş için yeni branch aç, main'e doğrudan commit atma.
+- İşi bitirince PR aç. PR'ları ben merge ederim, sen etme.
+- Bir issue üzerinde çalışıyorsan PR açıklamasına "Closes #numara" yaz.
+- Commit notlarını Türkçe ve açıklayıcı yaz.
+- Menüye yeni bölüm eklerken mobil menüyü de güncelle.
+- .env dosyasına dokunma, commit'e dahil etme.
